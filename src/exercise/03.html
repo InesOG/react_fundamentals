@@ -13,11 +13,16 @@
 
   <script type="text/babel">
 
-    // const element = <div className='container'>Hello World</div>
+    // PART 1: const element = <div className='container'>Hello World</div>
 
-    const className = 'container'
-    const children = 'Hello World'
-    const element = <div className={className}>{children}</div>
+    // PART 2:
+    // const className = 'container'
+    // const children = 'Hello World'
+    // const element = <div className={className}>{children}</div>
+
+    // PART 3:
+    const props = {className: 'container', children: 'Hello World'}
+    const element = <div {...props} />
 
     ReactDOM.createRoot(document.getElementById('root')).render(element)
   </script>
