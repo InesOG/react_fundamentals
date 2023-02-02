@@ -8,18 +8,17 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
     
-    function message({children}) {
+    function Message({children}) {
       return <div className="message">{children}</div>;
     }
-    
-    const helloWorld = React.createElement(message, {children: 'Hello World'});
 
     const element = (
       <div className="container">
-        {helloWorld} 
-        {message({children: 'Goodbye World'})}
+        <Message>Hello World</Message> 
+        <Message>Goodbye World</Message>
       </div>
-    ) // those are two different ways of interpolating a React function
+    )     
+
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.createRoot(document.getElementById('root')).render(element)
